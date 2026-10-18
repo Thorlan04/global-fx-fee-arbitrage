@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide Fiscal Micro-BNC & Connexion RIB FinTech | Global FX Arbitrage</title>
+  <meta name="description" content="Guide pratique complet pour connecter votre RIB/IBAN sur Impact, Awin, Wise et déclarer vos revenus d'affiliation en Micro-BNC (cases 5HQ / 5TE).">
+  <link rel="canonical" href="https://global-fx-fee-arbitrage.github.io/compta_impots/GUIDE_CONNEXION_FINTECH_RIB.html">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --bg-card: #131b2e;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #3b82f6;
+      --accent-green: #10b981;
+      --border-color: #23314e;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #60a5fa;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #34d399;
+      margin: 2rem 0 1rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: #93c5fd;
+      margin: 1.2rem 0 0.5rem;
+    }
+    p, li {
+      color: #d1d5db;
+      font-size: 1.05rem;
+      margin-bottom: 0.8rem;
+    }
+    ul, ol {
+      margin-left: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    code {
+      background: #0d1322;
+      border: 1px solid var(--border-color);
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      color: #fde047;
+      font-size: 0.95rem;
+    }
+    pre {
+      background: #0d1322;
+      border: 1px solid var(--border-color);
+      padding: 1.2rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      color: #a7f3d0;
+      margin: 1rem 0;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .back-btn:hover { text-decoration: underline; }
+    .callout {
+      background: rgba(16, 185, 129, 0.1);
+      border-left: 4px solid var(--accent-green);
+      padding: 1rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../fr/" class="back-btn">&larr; Retour au Calculateur d'Arbitrage</a>
+    <h1>Guide Pratique : Connexion IBAN FinTech & Fiscalité Micro-BNC</h1>
+    <p>Ce guide détaille pas à pas la configuration de vos coordonnées bancaires sur les régies d'affiliation FinTech (<strong>Impact.com</strong>, <strong>Awin</strong>, <strong>Wise Partners</strong>, <strong>Stripe</strong>) afin d'encaisser 100% de vos gains en <strong>virement SEPA direct sans frais de change ni commission bancaire</strong>, tout en respectant la réglementation fiscale française (<strong>Micro-Entreprise BNC</strong>).</p>
+
+    <h2>1. Pourquoi refuser PayPal et les virements SWIFT classiques ?</h2>
+    <ul>
+      <li><strong>PayPal :</strong> prélève environ 3,4% de commission + 3,5% à 4,0% de marge de change cachée lors du rapatriement. Sur 1 000 €, la perte nette atteint 60 € à 70 €.</li>
+      <li><strong>Banque Traditionnelle (SWIFT) :</strong> facture 15 € à 25 € de frais fixes + 15 € de banque intermédiaire + 3,1% de marge sur le taux de change.</li>
+      <li><strong>Solution Optimale (SEPA direct / FinTech) :</strong> configurer un IBAN européen direct ou un compte multi-devises (Wise Business / Revolut Business) pour encaisser les devises sans conversion forcée.</li>
+    </ul>
+
+    <h2>2. Configuration IBAN par Plateforme</h2>
+    <h3>A. Impact.com (Wise Partner & Remitly)</h3>
+    <ol>
+      <li>Connectez-vous sur Impact.com &gt; <em>Settings</em> (icône écrou en bas à gauche).</li>
+      <li>Allez dans <em>Finance &gt; Bank Account</em>.</li>
+      <li>Cliquez sur <em>Add Bank Account</em> : sélectionnez <code>France</code>, devise <code>EUR - Euro</code>, type <code>SEPA / EFT</code>.</li>
+      <li>Renseignez votre IBAN complet et BIC.</li>
+    </ol>
+
+    <h3>B. Optimisation Stripe : Éliminer les 2% de frais de conversion</h3>
+    <p>Dans votre tableau de bord Stripe &gt; <em>Paramètres &gt; Comptes bancaires</em> : ajoutez un compte bancaire en devise <code>USD</code> en renseignant le routing number (ABA) et le numéro de compte américain fournis par Wise ou Revolut Business. Vos reversements en dollars s'effectueront sans aucuns frais de change Stripe !</p>
+
+    <h2>3. Déclaration Fiscale Micro-Entreprise BNC (2026)</h2>
+    <div class="callout">
+      <strong>Déclaration Annuelle 2042-C-PRO :</strong>
+      <p style="margin-top:0.4rem;">• <strong>Case 5HQ (Régime classique) :</strong> Indiquez la totalité du CA brut. Le fisc applique l'abattement forfaitaire de <strong>34%</strong>. Vous êtes imposé sur 66% de vos recettes.</p>
+      <p>• <strong>Case 5TE (Versement Libératoire) :</strong> Si vous avez opté pour le versement libératoire (2,2%), reportez le montant brut dans cette case.</p>
+    </div>
+
+    <h3>Simulation en Ligne de Commande</h3>
+    <pre><code># Calcul pour 30 000 € de CA brut
+python compta_impots/tableau_fiscal_bnc.py --ca 30000
+
+# Option versement libératoire (case 5TE)
+python compta_impots/tableau_fiscal_bnc.py --ca 30000 --versement-liberatoire</code></pre>
+  </div>
+</body>
+</html>

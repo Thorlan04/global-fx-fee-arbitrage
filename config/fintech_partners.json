@@ -1,0 +1,121 @@
+{
+  "partners": [
+    {
+      "id": "wise",
+      "name": "Wise (ex-TransferWise)",
+      "tagline": "Taux moyen du marché en direct sans marge cachée",
+      "default_url": "https://wise.com/",
+      "affiliate_url": "https://wise.prf.hn/click/camref:YOUR_PARTNER_ID",
+      "fee_model": "transparent_percentage",
+      "average_percent_fee": 0.41,
+      "fixed_fee_eur": 0.50,
+      "exchange_markup_percent": 0.00,
+      "supports_multi_currency": true,
+      "badge": "Recommandé #1 - Taux Interbancaire Réel",
+      "cta_text": {
+        "fr": "Ouvrir un compte Wise (Transfert au taux réel)",
+        "en": "Get Wise Account (Real Mid-Market Rate)",
+        "de": "Wise Konto eröffnen (Echter Devisenmittelkurs)",
+        "es": "Abrir cuenta Wise (Tipo de cambio real)",
+        "it": "Apri conto Wise (Tasso di cambio reale)",
+        "pt": "Abrir conta Wise (Taxa de câmbio real)",
+        "nl": "Wise-rekening openen (Echte middenkoers)",
+        "ja": "Wise 口座を開設 (実際の為替レート)"
+      }
+    },
+    {
+      "id": "revolut",
+      "name": "Revolut",
+      "tagline": "Change multi-devises instantané et carte internationale",
+      "default_url": "https://www.revolut.com/",
+      "affiliate_url": "https://revolut.ngih.net/c/YOUR_PARTNER_ID",
+      "fee_model": "plan_based",
+      "average_percent_fee": 0.30,
+      "fixed_fee_eur": 0.00,
+      "exchange_markup_percent": 0.15,
+      "supports_multi_currency": true,
+      "badge": "Idéal Cartes & Dépenses du Quotidien",
+      "cta_text": {
+        "fr": "Découvrir Revolut",
+        "en": "Explore Revolut",
+        "de": "Revolut entdecken",
+        "es": "Descubrir Revolut",
+        "it": "Scopri Revolut",
+        "pt": "Conhecer Revolut",
+        "nl": "Ontdek Revolut",
+        "ja": "Revolut を試す"
+      }
+    },
+    {
+      "id": "ofx",
+      "name": "OFX",
+      "tagline": "Spécialiste transferts de gros volumes (> 5 000 €)",
+      "default_url": "https://www.ofx.com/",
+      "affiliate_url": "https://www.ofx.com/?pid=YOUR_PARTNER_ID",
+      "fee_model": "tiered_volume",
+      "average_percent_fee": 0.35,
+      "fixed_fee_eur": 0.00,
+      "exchange_markup_percent": 0.30,
+      "supports_multi_currency": true,
+      "badge": "Top pour Volumes Élevés (> 5 000 €)",
+      "cta_text": {
+        "fr": "Transférer de gros montants via OFX",
+        "en": "Transfer large amounts via OFX",
+        "de": "Große Beträge mit OFX überweisen",
+        "es": "Transferir grandes importes con OFX",
+        "it": "Trasferisci grandi importi con OFX",
+        "pt": "Transferir grandes quantias via OFX",
+        "nl": "Grote bedragen overboeken via OFX",
+        "ja": "OFX で高額送金"
+      }
+    },
+    {
+      "id": "remitly",
+      "name": "Remitly",
+      "tagline": "Envoi rapide vers les comptes bancaires et portefeuilles mobiles",
+      "default_url": "https://www.remitly.com/",
+      "affiliate_url": "https://remitly.sjv.io/c/YOUR_PARTNER_ID",
+      "fee_model": "corridor_based",
+      "average_percent_fee": 0.90,
+      "fixed_fee_eur": 1.99,
+      "exchange_markup_percent": 0.80,
+      "supports_multi_currency": false,
+      "badge": "Option Rapide Cash & Mobile Money",
+      "cta_text": {
+        "fr": "Envoyer via Remitly",
+        "en": "Send with Remitly",
+        "de": "Mit Remitly senden",
+        "es": "Enviar con Remitly",
+        "it": "Invia con Remitly",
+        "pt": "Enviar com Remitly",
+        "nl": "Verzenden via Remitly",
+        "ja": "Remitly で送金"
+      }
+    }
+  ],
+  "benchmarks": {
+    "traditional_bank": {
+      "name": "Banque Traditionnelle (SWIFT)",
+      "fixed_fee_eur": 22.00,
+      "exchange_markup_percent_min": 2.80,
+      "exchange_markup_percent_max": 3.60,
+      "average_exchange_markup_percent": 3.10,
+      "correspondent_bank_fee_eur": 15.00
+    },
+    "paypal": {
+      "name": "PayPal International",
+      "fixed_fee_eur": 0.35,
+      "percentage_fee": 3.40,
+      "exchange_markup_percent": 3.50,
+      "total_effective_drag_percent": 6.90
+    },
+    "stripe": {
+      "name": "Stripe Cross-Border",
+      "fixed_fee_eur": 0.25,
+      "percentage_fee": 1.50,
+      "cross_border_addon_percent": 1.50,
+      "currency_conversion_markup_percent": 2.00,
+      "total_effective_drag_percent": 5.00
+    }
+  }
+}

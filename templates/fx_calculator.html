@@ -1,0 +1,105 @@
+<!-- Global FX Fee Arbitrage - Interactive Real-Time Mathematical Calculator -->
+<div class="calculator-container" id="fx-arbitrage-calculator">
+  <div class="calc-header">
+    <div class="calc-badge">
+      <span class="live-pulse"></span>
+      <span id="txt-calc-live-status">Taux Interbancaire BCE Officiel en Direct</span>
+    </div>
+    <h2 id="txt-calc-headline">Calculateur Mathématique des Frais Cachés</h2>
+    <p class="calc-sub" id="txt-calc-sub">Découvrez au centime près la marge invisible prélevée par votre banque ou PayPal.</p>
+  </div>
+
+  <div class="calc-grid">
+    <div class="calc-input-group">
+      <label for="calc-amount" id="lbl-send-amount">Vous transférez :</label>
+      <div class="input-wrapper">
+        <input type="number" id="calc-amount" value="5000" min="1" step="any" inputmode="decimal">
+        <select id="calc-source-curr" aria-label="Devise source">
+          <!-- Injecté dynamiquement par JS -->
+        </select>
+      </div>
+      <div class="quick-amounts">
+        <button type="button" class="btn-amt" data-val="500">500</button>
+        <button type="button" class="btn-amt" data-val="1000">1 000</button>
+        <button type="button" class="btn-amt active" data-val="5000">5 000</button>
+        <button type="button" class="btn-amt" data-val="10000">10 000</button>
+      </div>
+    </div>
+
+    <div class="calc-swap-wrapper">
+      <button type="button" id="btn-swap-curr" title="Inverser les devises" aria-label="Inverser les devises">⇄</button>
+    </div>
+
+    <div class="calc-input-group">
+      <label for="calc-target-curr" id="lbl-receive-currency">Devise de destination :</label>
+      <div class="input-wrapper">
+        <input type="text" id="calc-rate-display" readonly value="Calcul en cours...">
+        <select id="calc-target-curr" aria-label="Devise cible">
+          <!-- Injecté dynamiquement par JS -->
+        </select>
+      </div>
+      <div class="rate-benchmark-label">
+        <span id="txt-mid-rate-notice">Taux BCE officiel : 1 <span class="src-code">EUR</span> = <strong id="lbl-current-mid-rate">1.0850</strong> <span class="tgt-code">USD</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bannières d'impact visuel : ROUGE vs VERT -->
+  <div class="arbitrage-summary-cards">
+    <div class="summary-card loss-bank">
+      <div class="card-icon">⚠️</div>
+      <div class="card-content">
+        <div class="card-title" id="txt-loss-bank-title">Perte Cachée - Banque Traditionnelle</div>
+        <div class="card-metric text-danger" id="metric-bank-loss">-184.30 USD</div>
+        <div class="card-subtext" id="metric-bank-subtext">3.10% de marge invisible + 37€ frais SWIFT</div>
+      </div>
+    </div>
+
+    <div class="summary-card loss-paypal">
+      <div class="card-icon">🛑</div>
+      <div class="card-content">
+        <div class="card-title" id="txt-loss-paypal-title">Perte Commission PayPal</div>
+        <div class="card-metric text-danger" id="metric-paypal-loss">-345.46 USD</div>
+        <div class="card-subtext" id="metric-paypal-subtext">3.40% commission + 3.50% marge sur taux</div>
+      </div>
+    </div>
+
+    <div class="summary-card profit-fintech">
+      <div class="card-icon">🚀</div>
+      <div class="card-content">
+        <div class="card-title" id="txt-gain-fintech-title">Économie Nette Immédiate FinTech</div>
+        <div class="card-metric text-success" id="metric-fintech-gain">+184.30 USD</div>
+        <div class="card-subtext" id="metric-fintech-subtext">Taux de change BCE 100% réel sans surcoût</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tableau comparatif en temps réel -->
+  <div class="table-responsive">
+    <table class="arbitrage-table">
+      <thead>
+        <tr>
+          <th id="th-provider">Fournisseur</th>
+          <th id="th-applied-rate">Taux Appliqué</th>
+          <th id="th-fees">Frais Déclarés</th>
+          <th id="th-hidden-markup">Marge Cachée</th>
+          <th id="th-amount-received">Montant Net Reçu</th>
+          <th id="th-action">Action</th>
+        </tr>
+      </thead>
+      <tbody id="arbitrage-tbody">
+        <!-- Rempli par JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Call to action principal -->
+  <div class="calc-cta-footer">
+    <a href="https://wise.com/" id="btn-primary-arbitrage-cta" class="btn-cta-pulse" target="_blank" rel="noopener nofollow">
+      <span class="cta-shine"></span>
+      <span class="cta-icon">⚡</span>
+      <span id="btn-cta-text">Récupérer cette économie avec Wise (Taux BCE Réel)</span>
+    </a>
+    <p class="cta-footnote" id="txt-cta-footnote">Calculs mathématiques certifiés sur la base du flux officiel de la Banque Centrale Européenne.</p>
+  </div>
+</div>

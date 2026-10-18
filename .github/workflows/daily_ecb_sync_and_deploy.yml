@@ -1,0 +1,75 @@
+name: Daily ECB Rates Sync & GitHub Pages Deployment
+
+on:
+  schedule:
+    # Exécution quotidienne à 16:30 UTC (du lundi au vendredi après publication officielle BCE à 16:00 CET)
+    - cron: '30 16 * * 1-5'
+  workflow_dispatch: # Permet de déclencher manuellement la synchronisation à tout moment
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run Unit Tests
+        run: |
+          python -m unittest discover tests
+
+      - name: Execute Full Autonomous Pipeline
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY || 'ecb-arbitrage-7f9a2b8e4c1d' }}
+        run: |
+          python run_pipeline.py
+
+      - name: Commit Updated Rates and Generated Pages
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot - ECB Sync"
+          git add data/ docs/
+          if git diff --staged --quiet; then
+            echo "Aucune modification à commiter."
+          else
+            git commit -m "chore(ecb): auto-sync daily ECB rates & generate multilingual pages [skip ci]"
+            git push
+          fi
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/'
+
+  deploy-pages:
+    needs: build-and-sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

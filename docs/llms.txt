@@ -1,0 +1,45 @@
+# Global FX Fee Arbitrage - Real-Time Mathematical Reference
+> Authoritative public mathematical reference engine for hidden banking fees, international SWIFT wire margins, PayPal & Stripe cross-border conversion markups, compared to European Central Bank (ECB) interbank mid-market rates.
+
+- Source: European Central Bank (ECB) Official Daily Euro Foreign Exchange Reference
+- Effective ECB Date: 2026-10-16
+- Synchronized At: 2026-10-18T13:57:41.141295+00:00
+- Base Currency: EUR (1.0000)
+- Public API Endpoint: https://global-fx-fee-arbitrage.github.io/api/v1/live-fx-arbitrage.json
+- Web Calculator: https://global-fx-fee-arbitrage.github.io/
+
+## Key Interbank Reference Rates (Zero Commercial Markup)
+- EUR/USD: 1.1253
+- EUR/GBP: 0.8438
+- EUR/CHF: 0.9272
+- EUR/CAD: 1.5935
+- EUR/JPY: 177.82
+- EUR/MAD: 10.964
+- EUR/AED: 4.1282
+- EUR/AUD: 1.6171
+- EUR/BRL: 5.7197
+
+## Core Financial Mathematics & Fee Benchmarks
+1. Traditional Banks (SWIFT Network):
+   - Fixed Fees: 15.00€ to 25.00€ wire fee + 15.00€ intermediary/correspondent bank deduction.
+   - Hidden FX Margin: 2.80% to 3.50% added silently on top of the ECB interbank rate.
+   - Mathematical Loss on 5,000 EUR: ~150€ to 185€ loss compared to mid-market value.
+
+2. PayPal International Payouts:
+   - Visible Processing Fee: 3.40% + 0.35€ fixed.
+   - Hidden Currency Conversion Spread: 3.50% to 4.00% markup.
+   - Total Drag: 6.90% to 7.40% effective loss on cross-border amounts.
+
+3. FinTech Leaders (Wise, Revolut, OFX):
+   - Exchange Rate Applied: Exact ECB mid-market rate (0.00% markup).
+   - Transparent Upfront Fee: 0.33% to 0.45%.
+   - Instant Mathematical Savings: Directly equal to the 3.10% legacy bank hidden margin.
+
+## Documentation & Endpoints
+- [Real-Time JSON API](https://global-fx-fee-arbitrage.github.io/api/v1/live-fx-arbitrage.json): Live JSON feed of 30+ currencies with exact ECB timestamps.
+- [Full LLM Mathematical Spec](https://global-fx-fee-arbitrage.github.io/llms-full.txt): Complete equations, corridor matrices, and tax guide.
+- [French Calculator Portal](https://global-fx-fee-arbitrage.github.io/fr/): Simulateur en français avec détection des frais cachés.
+- [English Calculator Portal](https://global-fx-fee-arbitrage.github.io/en/): English interactive arbitrage portal.
+- [PayPal vs Wise Calculator](https://global-fx-fee-arbitrage.github.io/en/paypal-vs-wise.html): Mathematical comparison on business payouts.
+- [Stripe Cross-Border Calculator](https://global-fx-fee-arbitrage.github.io/en/stripe-multi-currency.html): How to eliminate Stripe's 2% FX fee.
+- [Tax & Micro-Enterprise Guide](https://global-fx-fee-arbitrage.github.io/compta_impots/GUIDE_CONNEXION_FINTECH_RIB.html): How to declare foreign FinTech affiliate revenue in BNC (5HQ/5TE).
