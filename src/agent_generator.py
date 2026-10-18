@@ -27,7 +27,7 @@ from src.fee_math_engine import FeeMathEngine, ComparisonResult, quantize_curren
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] [%(levelname)s] %(message)s")
 logger = logging.getLogger("agent_generator")
 
-SITE_BASE_URL = "https://global-fx-fee-arbitrage.github.io"
+SITE_BASE_URL = "https://thorlan04.github.io/global-fx-fee-arbitrage"
 SUPPORTED_LANGUAGES = ["fr", "en", "de", "es", "it", "pt", "nl", "ja"]
 
 # Dictionnaire de traductions et métadonnées pour les 8 langues

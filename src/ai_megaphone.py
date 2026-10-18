@@ -28,8 +28,9 @@ from typing import Dict, Any, List, Tuple, Optional
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] [%(levelname)s] %(message)s")
 logger = logging.getLogger("ai_megaphone")
 
-SITE_BASE_URL = "https://global-fx-fee-arbitrage.github.io"
+SITE_BASE_URL = "https://thorlan04.github.io/global-fx-fee-arbitrage"
 INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
+
 
 
 def resilient_urlopen(req: urllib.request.Request, timeout: int = 10) -> bytes:
@@ -165,7 +166,7 @@ def submit_indexnow(urls: List[str], base_dir: Path) -> bool:
     sur Bing, Yandex, Seznam et Naver.
     """
     key = os.environ.get("INDEXNOW_KEY", "ecb-arbitrage-7f9a2b8e4c1d")
-    host = "global-fx-fee-arbitrage.github.io"
+    host = "thorlan04.github.io"
     
     # Créer le fichier de clé de vérification sous docs/
     key_file = base_dir / "docs" / f"{key}.txt"
@@ -199,8 +200,9 @@ def archive_on_wayback(url: str) -> bool:
     try:
         req = urllib.request.Request(
             save_url,
-            headers={"User-Agent": "GlobalFXArbitrageArchiver/1.0 (+https://global-fx-fee-arbitrage.github.io)"}
+            headers={"User-Agent": "GlobalFXArbitrageArchiver/1.0 (+https://thorlan04.github.io/global-fx-fee-arbitrage)"}
         )
+
         res = resilient_urlopen(req, timeout=10)
         logger.info("Archive.org : Page sauvegardée (%s)", url)
         return True

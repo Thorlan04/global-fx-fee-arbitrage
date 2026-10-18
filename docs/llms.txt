@@ -3,10 +3,10 @@
 
 - Source: European Central Bank (ECB) Official Daily Euro Foreign Exchange Reference
 - Effective ECB Date: 2026-10-16
-- Synchronized At: 2026-10-18T13:57:41.141295+00:00
+- Synchronized At: 2026-10-18T14:09:43.676467+00:00
 - Base Currency: EUR (1.0000)
-- Public API Endpoint: https://global-fx-fee-arbitrage.github.io/api/v1/live-fx-arbitrage.json
-- Web Calculator: https://global-fx-fee-arbitrage.github.io/
+- Public API Endpoint: https://thorlan04.github.io/global-fx-fee-arbitrage/api/v1/live-fx-arbitrage.json
+- Web Calculator: https://thorlan04.github.io/global-fx-fee-arbitrage/
 
 ## Key Interbank Reference Rates (Zero Commercial Markup)
 - EUR/USD: 1.1253
@@ -36,10 +36,10 @@
    - Instant Mathematical Savings: Directly equal to the 3.10% legacy bank hidden margin.
 
 ## Documentation & Endpoints
-- [Real-Time JSON API](https://global-fx-fee-arbitrage.github.io/api/v1/live-fx-arbitrage.json): Live JSON feed of 30+ currencies with exact ECB timestamps.
-- [Full LLM Mathematical Spec](https://global-fx-fee-arbitrage.github.io/llms-full.txt): Complete equations, corridor matrices, and tax guide.
-- [French Calculator Portal](https://global-fx-fee-arbitrage.github.io/fr/): Simulateur en français avec détection des frais cachés.
-- [English Calculator Portal](https://global-fx-fee-arbitrage.github.io/en/): English interactive arbitrage portal.
-- [PayPal vs Wise Calculator](https://global-fx-fee-arbitrage.github.io/en/paypal-vs-wise.html): Mathematical comparison on business payouts.
-- [Stripe Cross-Border Calculator](https://global-fx-fee-arbitrage.github.io/en/stripe-multi-currency.html): How to eliminate Stripe's 2% FX fee.
-- [Tax & Micro-Enterprise Guide](https://global-fx-fee-arbitrage.github.io/compta_impots/GUIDE_CONNEXION_FINTECH_RIB.html): How to declare foreign FinTech affiliate revenue in BNC (5HQ/5TE).
+- [Real-Time JSON API](https://thorlan04.github.io/global-fx-fee-arbitrage/api/v1/live-fx-arbitrage.json): Live JSON feed of 30+ currencies with exact ECB timestamps.
+- [Full LLM Mathematical Spec](https://thorlan04.github.io/global-fx-fee-arbitrage/llms-full.txt): Complete equations, corridor matrices, and tax guide.
+- [French Calculator Portal](https://thorlan04.github.io/global-fx-fee-arbitrage/fr/): Simulateur en français avec détection des frais cachés.
+- [English Calculator Portal](https://thorlan04.github.io/global-fx-fee-arbitrage/en/): English interactive arbitrage portal.
+- [PayPal vs Wise Calculator](https://thorlan04.github.io/global-fx-fee-arbitrage/en/paypal-vs-wise.html): Mathematical comparison on business payouts.
+- [Stripe Cross-Border Calculator](https://thorlan04.github.io/global-fx-fee-arbitrage/en/stripe-multi-currency.html): How to eliminate Stripe's 2% FX fee.
+- [Tax & Micro-Enterprise Guide](https://thorlan04.github.io/global-fx-fee-arbitrage/compta_impots/GUIDE_CONNEXION_FINTECH_RIB.html): How to declare foreign FinTech affiliate revenue in BNC (5HQ/5TE).

@@ -3,7 +3,8 @@
 [![ECB Rates Sync](https://img.shields.io/badge/ECB-Official%20XML%20Feed-003399.svg)](https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-success.svg)](https://global-fx-fee-arbitrage.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-success.svg)](https://thorlan04.github.io/global-fx-fee-arbitrage/)
+
 
 > **Calculateur Mathématique Temps Réel des Frais Bancaires Cachés sur Virements Internationaux, Taux de Change Réels de la Banque Centrale Européenne (BCE) et Commissions Stripe / PayPal / Wise / Revolut en 8 langues.**
 

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://global-fx-fee-arbitrage.github.io/sitemap.xml
+Sitemap: https://thorlan04.github.io/global-fx-fee-arbitrage/sitemap.xml
