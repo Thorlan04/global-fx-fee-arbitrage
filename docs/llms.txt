@@ -3,7 +3,7 @@
 
 - Source: European Central Bank (ECB) Official Daily Euro Foreign Exchange Reference
 - Effective ECB Date: 2026-10-16
-- Synchronized At: 2026-10-18T14:09:43.676467+00:00
+- Synchronized At: 2026-10-18T14:10:47.360209+00:00
 - Base Currency: EUR (1.0000)
 - Public API Endpoint: https://thorlan04.github.io/global-fx-fee-arbitrage/api/v1/live-fx-arbitrage.json
 - Web Calculator: https://thorlan04.github.io/global-fx-fee-arbitrage/
