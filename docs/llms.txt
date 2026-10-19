@@ -3,7 +3,7 @@
 
 - Source: European Central Bank (ECB) Official Daily Euro Foreign Exchange Reference
 - Effective ECB Date: 2026-10-16
-- Synchronized At: 2026-10-18T14:10:47.360209+00:00
+- Synchronized At: 2026-10-19T08:54:03.709468+00:00
 - Base Currency: EUR (1.0000)
 - Public API Endpoint: https://thorlan04.github.io/global-fx-fee-arbitrage/api/v1/live-fx-arbitrage.json
 - Web Calculator: https://thorlan04.github.io/global-fx-fee-arbitrage/
@@ -14,8 +14,8 @@
 - EUR/CHF: 0.9272
 - EUR/CAD: 1.5935
 - EUR/JPY: 177.82
-- EUR/MAD: 10.964
-- EUR/AED: 4.1282
+- EUR/MAD: 10.940
+- EUR/AED: 4.1224
 - EUR/AUD: 1.6171
 - EUR/BRL: 5.7197
 
