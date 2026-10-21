@@ -24,7 +24,7 @@ jobs:
       contents: write # Nécessaire pour commiter la mise à jour quotidienne des taux BCE
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Python 3.10
         uses: actions/setup-python@v5
