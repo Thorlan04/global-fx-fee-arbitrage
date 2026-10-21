@@ -2,7 +2,7 @@
 # The core engine runs on 100% pure Python standard library.
 # Optional enhancements for security, testing, and certificate verification:
 
-certifi>=2024.2.2
+certifi>=2026.10.18
 pytest>=7.4.0
 flake8>=6.1.0
 requests>=2.31.0
