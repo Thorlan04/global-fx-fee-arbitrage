@@ -5,4 +5,4 @@
 certifi>=2024.2.2
 pytest>=7.4.0
 flake8>=6.1.0
-requests>=2.31.0
+requests>=2.34.2
