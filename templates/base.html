@@ -18,6 +18,11 @@
   <link rel="alternate" hreflang="ja" href="{{SITE_BASE_URL}}/ja/{{PAGE_SLUG}}">
   <link rel="alternate" hreflang="x-default" href="{{SITE_BASE_URL}}/en/{{PAGE_SLUG}}">
 
+  <!-- Security & Privacy Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:;">
+
   <!-- OpenGraph & Twitter Cards -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{PAGE_TITLE}}">
@@ -682,7 +687,7 @@
             <td>~${(amt * wiseVar + wiseFixed).toFixed(2)} ${src}</td>
             <td><strong style="color:var(--accent-green);">0.00 %</strong></td>
             <td><strong style="color:var(--accent-green);font-size:1.1rem;">${wiseReceived.toLocaleString(undefined, { minimumFractionDigits: prec, maximumFractionDigits: prec })} ${tgtSymbol}</strong></td>
-            <td><a href="https://wise.com/" target="_blank" rel="noopener nofollow" class="btn-amt active">Transférer</a></td>
+            <td><a href="https://wise.com/" target="_blank" rel="noopener noreferrer nofollow" class="btn-amt active">Transférer</a></td>
           </tr>
           <tr>
             <td><strong>Revolut</strong> <span class="badge-pill success">Top Carte</span></td>
@@ -690,7 +695,7 @@
             <td>0.00 ${src}</td>
             <td>0.15 %</td>
             <td>${(amt * midRate * 0.997).toLocaleString(undefined, { minimumFractionDigits: prec, maximumFractionDigits: prec })} ${tgtSymbol}</td>
-            <td><a href="https://www.revolut.com/" target="_blank" rel="noopener nofollow" class="btn-amt">Découvrir</a></td>
+            <td><a href="https://www.revolut.com/" target="_blank" rel="noopener noreferrer nofollow" class="btn-amt">Découvrir</a></td>
           </tr>
           <tr class="highlight-danger">
             <td><strong>Stripe Cross-Border</strong> <span class="badge-pill warning">Pro</span></td>

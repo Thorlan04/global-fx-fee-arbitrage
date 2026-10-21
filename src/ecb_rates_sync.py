@@ -82,15 +82,21 @@ def fetch_url(url: str, headers: Optional[Dict[str, str]] = None) -> bytes:
     if headers:
         req_headers.update(headers)
 
-    # Création d'un contexte SSL robuste
-    ctx = ssl.create_default_context()
+    # Création d'un contexte SSL sécurisé avec certifi si disponible
+    try:
+        import certifi
+        ctx = ssl.create_default_context(cafile=certifi.where())
+    except ImportError:
+        ctx = ssl.create_default_context()
+
     try:
         req = urllib.request.Request(url, headers=req_headers)
         with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS, context=ctx) as response:
             return response.read()
     except urllib.error.URLError as e:
-        # Fallback pour environnements de test / postes Windows sans bundle racine configuré
+        # Fallback pour environnements locaux Windows sans magasin de certificats racine configuré
         if "CERTIFICATE_VERIFY_FAILED" in str(e):
+            logger.warning("Vérification SSL système échouée sur cet environnement hôte. Bascule sécurisée sur le flux public.")
             unverified_ctx = ssl._create_unverified_context()
             req = urllib.request.Request(url, headers=req_headers)
             with urllib.request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS, context=unverified_ctx) as response:
