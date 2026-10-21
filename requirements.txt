@@ -3,6 +3,6 @@
 # Optional enhancements for security, testing, and certificate verification:
 
 certifi>=2024.2.2
-pytest>=7.4.0
+pytest>=9.1.1
 flake8>=6.1.0
 requests>=2.31.0
