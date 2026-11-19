@@ -2,22 +2,22 @@
 > Authoritative public mathematical reference engine for hidden banking fees, international SWIFT wire margins, PayPal & Stripe cross-border conversion markups, compared to European Central Bank (ECB) interbank mid-market rates.
 
 - Source: European Central Bank (ECB) Official Daily Euro Foreign Exchange Reference
-- Effective ECB Date: 2026-11-18
-- Synchronized At: 2026-11-18T23:00:21.426454+00:00
+- Effective ECB Date: 2026-11-19
+- Synchronized At: 2026-11-19T23:09:34.465609+00:00
 - Base Currency: EUR (1.0000)
 - Public API Endpoint: https://thorlan04.github.io/global-fx-fee-arbitrage/api/v1/live-fx-arbitrage.json
 - Web Calculator: https://thorlan04.github.io/global-fx-fee-arbitrage/
 
 ## Key Interbank Reference Rates (Zero Commercial Markup)
-- EUR/USD: 1.0968
-- EUR/GBP: 0.8329
-- EUR/CHF: 0.9243
-- EUR/CAD: 1.5690
-- EUR/JPY: 174.85
-- EUR/MAD: 10.972
-- EUR/AED: 4.0394
-- EUR/AUD: 1.6294
-- EUR/BRL: 6.3818
+- EUR/USD: 1.0992
+- EUR/GBP: 0.8358
+- EUR/CHF: 0.9262
+- EUR/CAD: 1.5719
+- EUR/JPY: 175.84
+- EUR/MAD: 10.934
+- EUR/AED: 4.0302
+- EUR/AUD: 1.6378
+- EUR/BRL: 6.4765
 
 ## Core Financial Mathematics & Fee Benchmarks
 1. Traditional Banks (SWIFT Network):
